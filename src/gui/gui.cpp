@@ -8194,7 +8194,7 @@ bool FurnaceGUI::init() {
   compatFormats+="*.pdx ";
   compatFormats+="*.pzi ";
   compatFormats+="*.p86 ";
-  compatFormats+="*.p";
+  compatFormats+="*.p ";
   compatFormats+="*.aafc";
   audioLoadFormats[1]=compatFormats;
 
