@@ -228,11 +228,6 @@ void DivFilePlayer::mix(float** buf, int chans, unsigned int size) {
       lastWantBlock=blockIndex;
     }
 
-    if(playPos>si.frames){
-      stop();
-      playPos = 0;
-    }
-
     if (playing) {
       // sinc interpolation
       float x[8];

@@ -58,14 +58,10 @@ void FurnaceGUI::drawRefPlayer() {
       ImGui::TextUnformatted(_("no file loaded"));
     }
 
-    if(fp->isLoaded()){
-      ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x);
-      if (ImGui::SliderScalar("##Position",ImGuiDataType_U64,&playPos,&minPos,&maxPos,"")) {
-        fp->setPos(playPos);
-      }
+    ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x);
+    if (ImGui::SliderScalar("##Position",ImGuiDataType_U64,&playPos,&minPos,&maxPos,"")) {
+      fp->setPos(playPos);
     }
-
-    ImGui::Spacing();
 
     if (ImGui::Button(ICON_FA_FOLDER_OPEN "##Open")) {
       openFileDialog(GUI_FILE_MUSIC_OPEN);
