@@ -18,8 +18,6 @@
  */
 
 #include "fileOpsCommon.h"
-#include <cstdio>
-#include <cstring>
 
 #define AAFC_IMPLEMENTATION
 #include "../../extern/aafc/aafc.h" // >:
