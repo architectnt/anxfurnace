@@ -8195,6 +8195,7 @@ bool FurnaceGUI::init() {
   compatFormats+="*.pzi ";
   compatFormats+="*.p86 ";
   compatFormats+="*.p";
+  compatFormats+="*.aafc";
   audioLoadFormats[1]=compatFormats;
 
   audioLoadFormats.push_back(_("NES DPCM data"));
