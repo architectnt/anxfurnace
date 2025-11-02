@@ -620,6 +620,8 @@ extern/pwrnoise/pwrnoise.c
 
 extern/blip_buf/blip_buf.c
 
+extern/aafc/aafc.h
+
 src/pch.cpp
 
 src/engine/platform/sound/sn76496.cpp
@@ -777,6 +779,8 @@ src/engine/fileOps/ppc.cpp
 src/engine/fileOps/pps.cpp
 src/engine/fileOps/pvi.cpp
 src/engine/fileOps/pzi.cpp
+
+src/engine/fileOps/aafc.cpp
 
 src/engine/brrUtils.c
 src/engine/safeReader.cpp

@@ -20,6 +20,8 @@
 #include "engine.h"
 #include "../ta-log.h"
 #include "../fileutils.h"
+#include "sample.h"
+#include <cstdio>
 #ifdef HAVE_SNDFILE
 #include "sfWrapper.h"
 #endif
@@ -59,6 +61,24 @@ std::vector<DivSample*> DivEngine::sampleFromFile(const char* path) {
         i+='a'-'A';
       }
       extS+=i;
+    }
+
+
+    if(extS == ".aafc"){
+      FILE* f=ps_fopen(path,"rb");
+      if (f==NULL) {
+        lastError=strerror(errno);
+        return ret;
+      }
+      DivSample* s=new DivSample;
+      loadAAFC(f, s);
+      s->name=stripPath;
+
+      fclose(f);
+      ret.push_back(s);
+
+      BUSY_END;
+      return ret;
     }
 
     if(extS == ".pps" || extS == ".ppc" || extS == ".pvi" ||

@@ -11,3 +11,6 @@
 [submodule "extern/asio"]
 	path = extern/asio
 	url = https://github.com/tildearrow/asio-cmake.git
+[submodule "extern/aafc"]
+	path = extern/aafc
+	url = https://git.architectenterprises.net/architectnt/aafc

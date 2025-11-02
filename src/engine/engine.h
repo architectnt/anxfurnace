@@ -670,7 +670,8 @@ class DivEngine {
   void loadPZI(SafeReader& reader, std::vector<DivSample*>& ret, String& stripPath);
   void loadP86(SafeReader& reader, std::vector<DivSample*>& ret, String& stripPath);
 
-
+  // aafc
+  void loadAAFC(FILE* f, DivSample* sample);
 
   int loadSampleROM(String path, ssize_t expectedSize, unsigned char*& ret);
 

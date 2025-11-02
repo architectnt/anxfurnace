@@ -8224,6 +8224,9 @@ bool FurnaceGUI::init() {
   audioLoadFormats.push_back(_("PMD OKI ADPCM sample bank"));
   audioLoadFormats.push_back("*.p");
 
+  audioLoadFormats.push_back(_("AAFC Clip"));
+  audioLoadFormats.push_back("*.aafc");
+
   audioLoadFormats.push_back(_("all files"));
   audioLoadFormats.push_back("*");
 
