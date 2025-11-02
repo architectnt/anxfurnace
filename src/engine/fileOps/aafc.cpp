@@ -46,6 +46,13 @@ void DivEngine::loadAAFC(FILE* f, DivSample* s){
     return;
   }
 
+  if((dec.header.samplelength / dec.header.channels)>16777215){
+    logE("sample length is too large! (max sample length is 16777215)");
+    delete[] data;
+    delete[] dec.data;
+    return;
+  }
+
   delete[] data;
 
   logI("aafc data loaded");
